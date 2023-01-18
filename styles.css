@@ -16,7 +16,21 @@ body {
 .grid {
 
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    
+  grid-template-areas: 'header header header' 
+                       'nav nav nav'
+                       'content content content'
+                       'aside nueva nueva'
+                       'aside nueva nueva'
+                       'footer footer footer' 
+  
+  
+  
+  
+  
+  
+  ;
+ 
     background-color: rgba(127, 231, 145, 0.61);
     border: 2px solid black;
     width: 70%;
@@ -37,7 +51,7 @@ body {
 
     font-size: 50px;
     background-color: rgb(255, 104, 104);
-    grid-column: 2/5;
+    grid-area: header;
     line-height: 150px;
 
 }
@@ -45,7 +59,7 @@ body {
 .nav {
 
     font-size: 40px;
-    grid-column: 1/5;
+    grid-area: nav;
     background-color: beige;
     color: black;
     line-height: 70px;
@@ -57,7 +71,7 @@ body {
 .content {
 
     font-size: 100px;
-    grid-column: 1/4;
+    grid-area: content;
     line-height: 500px;
 }
 
@@ -66,20 +80,27 @@ body {
 .aside {
 
     font-size: 20px;
-    grid-column: 4/5;
-    line-height: 500px;
+    grid-area: aside;
+    line-height: 50px;
     background-color: burlywood;
     color: black;
 
 }
 
+.nueva {
 
+    font-size: 50px;
+    background-color: green;
+    grid-area: nueva;
+    line-height: 70px;
+
+}
 
 .footer {
 
     font-size: 50px;
     background-color: green;
-    grid-column: 1/5;
+    grid-area: footer;
     line-height: 70px;
 
 }
